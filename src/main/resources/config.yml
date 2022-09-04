@@ -1,0 +1,35 @@
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# | HYPIXEL MIGRATOR CONFIGURATION FILE      |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# Version: ${project.version}
+# Author: CubeCrafter
+# Issues: https://github.com/CubeCrafter/BedWars1058-HypixelMigrator/issues
+# Discord: https://discord.gg/ehjkwp5Fn4
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# | SETTINGS                                 |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+# The Hypixel API key. You can get one by joining hypixel.net and typing /api new
+hypixel-api-key: ""
+# Set this to false if players are not authenticated through Mojang servers
+# Warning: This will allow non-premium players with premium nicknames to migrate their layout
+# I strongly recommend to keep this option enabled
+online-mode: true
+# The item displayed in the shop
+shop-item:
+  material: GLOWSTONE_DUST
+  displayname: "&aMigrate Layout from Hypixel"
+  lore:
+    - "&7Click this item to migrate your"
+    - "&7Hypixel Quick Buy Layout!"
+    - ""
+    - "&eClick to migrate!"
+  slot: 52
+messages:
+  not-premium-player: "&cYou are not a premium player!"
+  migration-started: "&aMigrating your Hypixel Quick Buy layout..."
+  migration-failed: "&cSeems like you don't have an Hypixel Profile!"
+  migration-success: "&aYour Hypixel Quick Buy layout has been migrated!"
+
+
