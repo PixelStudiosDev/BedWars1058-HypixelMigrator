@@ -5,7 +5,7 @@ import com.andrei1058.bedwars.api.language.Language;
 import com.andrei1058.bedwars.api.language.Messages;
 import lombok.RequiredArgsConstructor;
 import me.cubecrafter.migrator.HypixelMigrator;
-import me.cubecrafter.migrator.utils.ItemBuilder;
+import me.cubecrafter.migrator.utility.ItemBuilder;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;

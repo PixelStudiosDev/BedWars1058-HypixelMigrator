@@ -5,7 +5,7 @@ import com.andrei1058.bedwars.shop.quickbuy.QuickBuyElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import me.cubecrafter.migrator.HypixelMigrator;
-import me.cubecrafter.migrator.utils.TextUtil;
+import me.cubecrafter.migrator.utility.ChatUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
@@ -35,7 +35,7 @@ public class LayoutMigrator {
         } else {
             fetchOnlineUUID(player, uuid -> {
                 if (uuid == null) {
-                    TextUtil.sendMessage(player, config.getString("messages.not-premium-player"));
+                    ChatUtils.sendMessage(player, config.getString("messages.not-premium-player"));
                 } else {
                     applyLayout(player, uuid);
                 }
@@ -44,14 +44,14 @@ public class LayoutMigrator {
     }
 
     private void applyLayout(Player player, UUID uuid) {
-        TextUtil.sendMessage(player, config.getString("messages.migration-started"));
+        ChatUtils.sendMessage(player, config.getString("messages.migration-started"));
         fetchProfile(uuid, response -> {
             if (response == null) {
-                TextUtil.sendMessage(player, config.getString("messages.not-premium-player"));
+                ChatUtils.sendMessage(player, config.getString("messages.not-premium-player"));
                 return;
             }
             if (response.get("player").isJsonNull()) {
-                TextUtil.sendMessage(player, config.getString("messages.migration-failed"));
+                ChatUtils.sendMessage(player, config.getString("messages.migration-failed"));
                 return;
             }
             String layout = response.getAsJsonObject("player").getAsJsonObject("stats").getAsJsonObject("Bedwars").get("favourites_2").getAsString();
@@ -69,7 +69,7 @@ public class LayoutMigrator {
                 }
             }
             cache.pushChangesToDB();
-            TextUtil.sendMessage(player, config.getString("messages.migration-success"));
+            ChatUtils.sendMessage(player, config.getString("messages.migration-success"));
         });
     }
 

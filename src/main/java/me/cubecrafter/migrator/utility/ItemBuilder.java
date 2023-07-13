@@ -1,4 +1,4 @@
-package me.cubecrafter.migrator.utils;
+package me.cubecrafter.migrator.utility;
 
 import com.cryptomorin.xseries.SkullUtils;
 import com.cryptomorin.xseries.XMaterial;
@@ -21,14 +21,14 @@ public class ItemBuilder {
 
     public ItemBuilder setDisplayName(String name) {
         ItemMeta meta = item.getItemMeta();
-        meta.setDisplayName(TextUtil.color(name));
+        meta.setDisplayName(ChatUtils.colorTranslate(name));
         item.setItemMeta(meta);
         return this;
     }
 
     public ItemBuilder setLore(List<String> lore) {
         ItemMeta meta = item.getItemMeta();
-        meta.setLore(TextUtil.color(lore));
+        meta.setLore(ChatUtils.colorTranslate(lore));
         item.setItemMeta(meta);
         return this;
     }
