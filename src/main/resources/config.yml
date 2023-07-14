@@ -26,10 +26,5 @@ shop-item:
     - ""
     - "&eClick to migrate!"
   slot: 52
-messages:
-  not-premium-player: "&cYou are not a premium player!"
-  migration-started: "&aMigrating your Hypixel Quick Buy layout..."
-  migration-failed: "&cSeems like you don't have an Hypixel Profile!"
-  migration-success: "&aYour Hypixel Quick Buy layout has been migrated!"
 
 
